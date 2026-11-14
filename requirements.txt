@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+statsmodels
+matplotlib
+# Only needed for scripts/validate_accommodation.py
+scikit-learn
+transformers
+torch

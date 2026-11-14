@@ -1,0 +1,25 @@
+# Secrets: never commit API keys
+.env
+*.env
+.env.*
+*.key
+*secret*
+*token*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Derived or temporary files
+*.pkl
+data/Accommodation_Analysis_Ready.csv
+data/Accommodation_Effects.csv
+data/Accommodation_Validated.csv
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

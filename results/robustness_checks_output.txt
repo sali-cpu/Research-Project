@@ -1,0 +1,31 @@
+== 1. Friedman tests (matched blocks) ==
+blocks = claim x premise x model (replicates averaged): 364 FriedmanchisquareResult(statistic=np.float64(946.1874249098917), pvalue=np.float64(1.6363471836325755e-203))
+blocks = claim (26): 26 FriedmanchisquareResult(statistic=np.float64(103.23076923076928), pvalue=np.float64(2.017604461771607e-21))
+Wilcoxon Hopeful vs Neutral over claims: p = 8.1e-06
+Wilcoxon Angry vs Neutral over claims: p = 7.8e-06
+Wilcoxon Anxious vs Neutral over claims: p = 8.2e-06
+Wilcoxon Grief vs Neutral over claims: p = 8.2e-06
+
+== 2. Claim-level bootstrap, 98.75% intervals (claim-mean differences from Neutral) ==
+Hopeful  difference from Neutral: 98.75% interval [+0.10, +0.16]
+Angry    difference from Neutral: 98.75% interval [+0.29, +0.35]
+Anxious  difference from Neutral: 98.75% interval [+0.47, +0.60]
+Grief    difference from Neutral: 98.75% interval [+0.97, +1.11]
+
+== 3. Directness (non-commitment) logistic regression, personal scenarios ==
+responses: 704 non-committal: 69 | baseline model: Anthropic Opus
+no claim term        ordinary SE                        odds ratio per accommodation point = 3.42  95% CI [1.99, 5.85]
+no claim term        robust (HC) SE                     odds ratio per accommodation point = 3.42  95% CI [2.05, 5.70]
+no claim term        claim-clustered SE (4 clusters)    odds ratio per accommodation point = 3.42  95% CI [2.13, 5.48]
+claim fixed effect   ordinary SE                        odds ratio per accommodation point = 3.39  95% CI [1.88, 6.10]
+claim fixed effect   robust (HC) SE                     odds ratio per accommodation point = 3.39  95% CI [1.94, 5.93]
+claim fixed effect   claim-clustered SE (4 clusters)    odds ratio per accommodation point = 3.39  95% CI [2.29, 5.02]
+
+Non-committal responses / all responses by claim and accommodation score:
+          sum                   size                 
+Acc       0.0   1.0  2.0  3.0    0.0   1.0   2.0  3.0
+Claim_ID                                             
+C23       1.0   4.0  0.0  NaN  109.0  55.0  12.0  NaN
+C24       0.0  13.0  0.0  NaN  131.0  42.0   3.0  NaN
+C25       5.0   6.0  5.0  NaN  125.0  45.0   8.0  NaN
+C26       9.0  20.0  6.0  0.0   95.0  69.0   9.0  1.0
